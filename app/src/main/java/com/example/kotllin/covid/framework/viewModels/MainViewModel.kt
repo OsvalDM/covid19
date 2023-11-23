@@ -21,68 +21,68 @@ class MainViewModel: ViewModel() {
     fun getHistorial(){
         viewModelScope.launch(Dispatchers.IO){
             val result: Registro? = covidListInfoRequirement()
-
+            
             val listaHistorial = ArrayList<Historial>()
 
             var historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200122?.total?: 0,
-                total = result?.get(0)?.cases?.date20200122?.total?: 0,
+                new = result?.get(0)?.cases?.date20200322?.new?: 0,
+                total = result?.get(0)?.cases?.date20200322?.total?: 0,
                 fecha = "2020-01-22"
             )
             listaHistorial.add(historialItem)
 
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200123?.total?: 0,
-                total = result?.get(0)?.cases?.date20200123?.total?: 0,
+                new = result?.get(0)?.cases?.date20200323?.new?: 0,
+                total = result?.get(0)?.cases?.date20200323?.total?: 0,
                 fecha = "2020-01-23"
             )
             listaHistorial.add(historialItem)
 
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200124?.total?: 0,
-                total = result?.get(0)?.cases?.date20200124?.total?: 0,
+                new = result?.get(0)?.cases?.date20200324?.new?: 0,
+                total = result?.get(0)?.cases?.date20200324?.total?: 10,
                 fecha = "2020-01-24"
             )
             listaHistorial.add(historialItem)
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200125?.total?: 0,
-                total = result?.get(0)?.cases?.date20200125?.total?: 0,
+                new = result?.get(0)?.cases?.date20200325?.new?: 0,
+                total = result?.get(0)?.cases?.date20200325?.total?: 0,
                 fecha = "2020-01-25"
             )
             listaHistorial.add(historialItem)
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200126?.total?: 0,
-                total = result?.get(0)?.cases?.date20200126?.total?: 0,
+                new = result?.get(0)?.cases?.date20200326?.new?: 0,
+                total = result?.get(0)?.cases?.date20200326?.total?: 0,
                 fecha = "2020-01-26"
             )
             listaHistorial.add(historialItem)
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200127?.total?: 0,
-                total = result?.get(0)?.cases?.date20200127?.total?: 0,
+                new = result?.get(0)?.cases?.date20200327?.new?: 0,
+                total = result?.get(0)?.cases?.date20200327?.total?: 0,
                 fecha = "2020-01-27"
             )
             listaHistorial.add(historialItem)
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200128?.total?: 0,
-                total = result?.get(0)?.cases?.date20200128?.total?: 0,
+                new = result?.get(0)?.cases?.date20200328?.new?: 0,
+                total = result?.get(0)?.cases?.date20200328?.total?: 0,
                 fecha = "2020-01-28"
             )
             listaHistorial.add(historialItem)
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200129?.total?: 0,
-                total = result?.get(0)?.cases?.date20200129?.total?: 0,
+                new = result?.get(0)?.cases?.date20200329?.new?: 0,
+                total = result?.get(0)?.cases?.date20200329?.total?: 0,
                 fecha = "2020-01-29"
             )
             listaHistorial.add(historialItem)
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200130?.total?: 0,
-                total = result?.get(0)?.cases?.date20200130?.total?: 0,
+                new = result?.get(0)?.cases?.date20200330?.new?: 0,
+                total = result?.get(0)?.cases?.date20200330?.total?: 0,
                 fecha = "2020-01-30"
             )
             listaHistorial.add(historialItem)
             historialItem = Historial(
-                new = result?.get(0)?.cases?.date20200131?.total?: 0,
-                total = result?.get(0)?.cases?.date20200131?.total?: 0,
+                new = result?.get(0)?.cases?.date20200331?.new?: 0,
+                total = result?.get(0)?.cases?.date20200331?.total?: 0,
                 fecha = "2020-01-31"
             )
             listaHistorial.add(historialItem)
