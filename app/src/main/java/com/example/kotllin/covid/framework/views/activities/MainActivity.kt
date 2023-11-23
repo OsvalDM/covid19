@@ -49,7 +49,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpView(dataForList:ArrayList<Historial>){
-
+        binding.ano1.text = dataForList[0].fecha + ": " + dataForList[0].total
+        binding.ano2.text = dataForList[1].fecha + ": " + dataForList[1].total
+        binding.ano3.text = dataForList[2].fecha + ": " + dataForList[2].total
+        binding.ano4.text = dataForList[3].fecha + ": " + dataForList[3].total
     }
     private fun setUpRecyclerView(dataForList:ArrayList<Historial>){
         binding.rvcovid.setHasFixedSize(true)

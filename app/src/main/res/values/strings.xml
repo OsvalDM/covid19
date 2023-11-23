@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">covid</string>
+    <string name="introAnos">Tomando en cuenta que la pandemia por Covid19 duro varios años se muestra a continuacion datos sobre fechas finales a cada año; ademas del ultimo registro recabado.</string>
+    <string name="introHistorial">En Mexico la suspencion de clases comenzo el 20 de Marzo del 2020. Se muestra inforamcion desde ese dia hasta el fin del mes</string>
 </resources>
