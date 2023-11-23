@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         initializeListeners()
 
         viewModel.getHistorial()
+        viewModel.getInfo()
     }
 
     private fun initializeBinding() {
@@ -36,21 +37,28 @@ class MainActivity : AppCompatActivity() {
     private fun initializeObservers() {
         viewModel.covidObjectLiveData.observe(this) { registroObject ->
             if (registroObject != null) {
-                setUpView(registroObject)
                 setUpRecyclerView(registroObject)
+            }
+        }
+
+        viewModel.infoObjectLiveData.observe(this) {info ->
+            if (info != null) {
+                setUpView(info)
             }
         }
     }
 
     private fun setUpView(dataForList:ArrayList<Historial>){
+
     }
     private fun setUpRecyclerView(dataForList:ArrayList<Historial>){
         binding.rvcovid.setHasFixedSize(true)
-        val linearLayoutManager = LinearLayoutManager(
+        val gridLayoutManager = GridLayoutManager(
             this,
-            LinearLayoutManager.VERTICAL,
-            false)
-        binding.rvcovid.layoutManager = linearLayoutManager
+            2,
+            GridLayoutManager.VERTICAL,
+            false    )
+        binding.rvcovid.layoutManager = gridLayoutManager
         adapter.HistorialAdapter(dataForList, this)
         binding.rvcovid.adapter = adapter
     }
