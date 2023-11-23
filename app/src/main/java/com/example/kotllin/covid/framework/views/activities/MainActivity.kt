@@ -3,6 +3,7 @@ package com.example.kotllin.covid.framework.views.activities
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kotllin.covid.data.network.model.covid.RegistroItem
 import com.example.kotllin.covid.databinding.ActivityMainBinding
 import com.example.kotllin.covid.framework.viewModels.MainViewModel
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         initializeObservers()
         initializeListeners()
 
+        viewModel.getHistorial()
     }
 
     private fun initializeBinding() {
@@ -24,7 +26,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    private fun initializeObservers(){
+    private fun initializeObservers() {
+        viewModel.covidObjectLiveData.observe(this) { registroObject ->
+            if (registroObject != null) {
+                //setUpView(registroObject.registros)
+            }
+        }
+    }
+
+    private fun setUpView(dataForList:ArrayList<RegistroItem>){
     }
 
     private fun initializeListeners(){
